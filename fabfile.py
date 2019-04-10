@@ -85,8 +85,8 @@ def _get_latest_source():
         run('cd %s && git fetch' % (project_folder,))
     else:
         run('git clone %s %s' % (REPO_URL, project_folder))
-    current_commit = local("git log -n 1 --format=%H", capture=True)
-    run('cd %s && git reset --hard %s' % (project_folder, current_commit))
+    #current_commit = local("git log -n 1 --format=%H", capture=True)
+    #run('cd %s && git reset --hard %s' % (project_folder, current_commit))
     #run('cd %s && git reset --hard' % (project_folder, ))
 
 def _update_virtualenv():
